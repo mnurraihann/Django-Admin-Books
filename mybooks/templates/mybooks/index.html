@@ -1,0 +1,11 @@
+<h1>My Book Lists</h1>
+
+{% if mybooks_list %}
+    <ul>
+    {% for book in mybooks_list %}
+        <li><a href="{% url 'mybooks:detail' book.id %}">{{ book.title }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>The library is empty.</p>
+{% endif %}

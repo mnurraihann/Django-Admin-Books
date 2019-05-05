@@ -1,7 +1,14 @@
-<h1>Title: {{ book.title }}</h1>
+<h1>{{ book.title }}</h1>
 
 <ul>
     <li>Author: {{ book.author }}</li>
     <li>Publisher: {{ book.publisher }}</li>
     <li>Year: {{ book.year }}</li>
+    <li>
+    	{% if book.availability %}
+    		Available
+    	{% else %}
+    		Not Available
+    	{% endif %}
+    </li>
 </ul>
